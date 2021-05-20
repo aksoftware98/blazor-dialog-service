@@ -1,0 +1,17 @@
+﻿
+@if (_isOpen)
+{
+    <div class="dialog">
+        <h3>@_title</h3>
+        <p>
+            @_description
+        </p>
+
+        <div class="actions">
+            <button class="btn btn-primary" @onclick="() => OnButtonClicked(DialogResult.Ok)">Great</button>
+            <button class="btn btn-primary" @onclick="() => OnButtonClicked(DialogResult.Cancel)">Cancel</button>
+        </div>
+    </div>
+}
+
+

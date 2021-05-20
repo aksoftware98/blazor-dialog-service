@@ -1,0 +1,27 @@
+﻿.dialog {
+    position: fixed;
+    top: 20%;
+    width: 400px; 
+    margin: auto; 
+    background-color: white;
+    border-radius: 10px; 
+    text-align: center;
+    border: 2px solid black;
+    z-index: 1000;
+}
+
+    .dialog .actions {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 30px; 
+        display: flex;
+        justify-content: space-between
+    }
+
+    .dialog button {
+        width: 60px; 
+        height: 29px; 
+        padding: 2px;
+    }
+

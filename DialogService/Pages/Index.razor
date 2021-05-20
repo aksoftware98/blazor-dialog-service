@@ -1,0 +1,33 @@
+﻿@page "/"
+
+@inject IDialogService DialogService
+<h1>Hello, world! @_message</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<button class="btn btn-success" @onclick="ClickShowDialog">Show Dialog</button>
+
+@code
+{
+    private string _message = string.Empty;
+    private async Task ClickShowDialog()
+    {
+        var dialogResult = await DialogService.ShowDialogAsync("Alert", "Are you sure?");
+        if (dialogResult == DialogResult.Ok)
+        {
+            _message = "Heey thanks mate";
+        }
+        else if (dialogResult == DialogResult.Cancel)
+        {
+            _message = "Ammmm, interesting";
+        }
+        else
+        {
+            _message = "Okay as you want";
+        }
+
+    }
+
+}
